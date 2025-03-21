@@ -6,6 +6,7 @@ import dev.jiricekm.petstore.common.StoreApiTestBase;
 import dev.jiricekm.petstore.dto.DTOFactory;
 import dev.jiricekm.petstore.dto.OrderDTO;
 import dev.jiricekm.petstore.enums.OrderStatus;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.ExecutorService;
@@ -63,7 +64,7 @@ public class PerformanceTests extends StoreApiTestBase {
             }
             executor.shutdown();
             if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
-                System.err.println("Some tasks were not completed within the expected time frame.");
+                Reporter.log("Some tasks were not completed within the expected time frame.");
             }
         }
     }
@@ -78,7 +79,7 @@ public class PerformanceTests extends StoreApiTestBase {
             }
             executor.shutdown();
             if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
-                System.err.println("Some tasks were not completed within the expected time frame.");
+                Reporter.log("Some tasks were not completed within the expected time frame.");
             }
         }
     }
