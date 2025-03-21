@@ -76,28 +76,6 @@ This project is a comprehensive testing suite for the **PetStore API** based on 
 
 ## 🧪 Running Tests
 
-### Functional Tests
-
-Run functional tests with:
-
-```bash
-mvn test -Ptest -Dgroups=functional
-```
-
-### Performance Tests
-
-```bash
-mvn test -Dgroups=performance
-```
-
-### Security Tests
-
-```bash
-mvn test -Dgroups=security
-```
-
-### Full Test Suite
-
 ```bash
 mvn test -Ptest
 ```
